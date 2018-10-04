@@ -67,7 +67,9 @@ void LLISTABIORD_avanca (LlistaBiOrd *l){
 }
 
 void LLISTABIORD_retrocediex (LlistaBiOrd *l){
-
+  if (l -> pdi != l -> pri){
+    l -> pdi = l -> pdi -> ant;
+  }
 }
 
 void LLISTABIORD_vesInici (LlistaBiOrd *l){
