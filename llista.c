@@ -73,7 +73,7 @@ void LLISTABIORD_retrocediex (LlistaBiOrd *l){
 }
 
 void LLISTABIORD_vesInici (LlistaBiOrd *l){
-
+  l -> pdi = l -> pri -> seg;
 }
 
 void LLISTABIORD_vesFi (LlistaBiOrd *l){
