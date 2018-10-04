@@ -25,7 +25,20 @@ LlistaBiOrd LLISTABIORD_crea(){
 }
 
 void LLISTABIORD_insereixOrdenat (LlistaBiOrd *l, Element e){
-
+  NodeBiOrd* aux;
+  aux = (NodeBiOrd*) malloc (sizeof(NodeBiOrd));
+  if (aux == NULL){
+    printf("No s'ha pugut inserir a la llista\n");
+  }else{
+    aux -> e = e;
+    l.ant = l.pri;
+    while (l.ant -> seg != NULL && l.ant -> seg -> e < e) {
+      l.ant = l.ant -> seg;
+    }
+    aux -> seg = l.ant -> seg;
+    l.ant -> seg = aux;
+  }
+  return l;
 }
 
 Element LLISTABIORD_consulta (LlistaBiOrd l){
