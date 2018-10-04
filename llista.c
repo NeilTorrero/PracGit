@@ -61,7 +61,9 @@ void LLISTABIORD_esborra (LlistaBiOrd *l){
 }
 
 void LLISTABIORD_avanca (LlistaBiOrd *l){
-
+  if (l -> pdi != l -> ult) {
+    l -> pdi = l -> pdi -> seg;
+  }
 }
 
 void LLISTABIORD_retrocediex (LlistaBiOrd *l){
