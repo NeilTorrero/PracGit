@@ -77,7 +77,7 @@ void LLISTABIORD_vesInici (LlistaBiOrd *l){
 }
 
 void LLISTABIORD_vesFi (LlistaBiOrd *l){
-
+  l -> pdi = l -> ult -> ant;
 }
 
 int LLISTABIORD_inici (LlistaBiOrd l){
