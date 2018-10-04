@@ -85,7 +85,7 @@ int LLISTABIORD_inici (LlistaBiOrd l){
 }
 
 int LLISTABIORD_fi (LlistaBiOrd l){
-
+  return l.pdi == l.ult;
 }
 
 int LLISTABIORD_buida (LlistaBiOrd l){
