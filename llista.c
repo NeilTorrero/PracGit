@@ -92,6 +92,12 @@ int LLISTABIORD_buida (LlistaBiOrd l){
   return l.pri -> seg == l.ult;
 }
 
-int LLISTABIORD_destrueix (LlistaBiOrd l){
-
+int LLISTABIORD_destrueix (LlistaBiOrd *l){
+  NodeBiOrd *aux;
+  while (l -> pri != NULL) {
+    aux = l -> pri;
+    l -> pri = l -> pri -> seg;
+    free (aux);
+  }
+  l -> pdi = l -> ult = l -> pri = NULL;
 }
