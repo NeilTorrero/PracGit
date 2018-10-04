@@ -8,9 +8,9 @@ typedef struct N{
 }NodeBiOrd;
 
 typedef struct{
-  NodeBi *pri;
-  NodeBi *ult;
-  NodeBi *pdi;
+  NodeBiOrd *pri;
+  NodeBiOrd *ult;
+  NodeBiOrd *pdi;
 }LlistaBiOrd;
 
 LlistaBiOrd LLISTABIORD_crea ();
