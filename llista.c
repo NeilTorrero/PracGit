@@ -50,7 +50,14 @@ Element LLISTABIORD_consulta (LlistaBiOrd l){
 }
 
 void LLISTABIORD_esborra (LlistaBiOrd *l){
-
+  NodeBiOrd *aux;
+  if (l -> pdi != l -> pri && l -> pdi != l -> ult) {
+    aux = l -> pdi;
+    aux -> ant -> seg = aux -> seg;
+    aux -> seg -> ant = aux -> ant;
+    l -> pdi = l -> pdi -> seg;
+    free (aux);
+  }
 }
 
 void LLISTABIORD_avanca (LlistaBiOrd *l){
