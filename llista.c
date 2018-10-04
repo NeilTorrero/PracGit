@@ -89,7 +89,7 @@ int LLISTABIORD_fi (LlistaBiOrd l){
 }
 
 int LLISTABIORD_buida (LlistaBiOrd l){
-
+  return l.pri -> seg == l.ult;
 }
 
 int LLISTABIORD_destrueix (LlistaBiOrd l){
