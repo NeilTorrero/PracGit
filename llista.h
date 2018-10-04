@@ -35,6 +35,6 @@ int LLISTABIORD_fi (LlistaBiOrd l);
 
 int LLISTABIORD_buida (LlistaBiOrd l);
 
-int LLISTABIORD_destrueix (LlistaBiOrd l);
+int LLISTABIORD_destrueix (LlistaBiOrd *l);
 
 #endif
