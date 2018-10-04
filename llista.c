@@ -81,7 +81,7 @@ void LLISTABIORD_vesFi (LlistaBiOrd *l){
 }
 
 int LLISTABIORD_inici (LlistaBiOrd l){
-
+  return l.pdi == l.pri;
 }
 
 int LLISTABIORD_fi (LlistaBiOrd l){
