@@ -13,6 +13,8 @@ typedef struct{
   NodeBiOrd *pdi;
 }LlistaBiOrd;
 
+Element ELEMENT_indefinit ();
+
 LlistaBiOrd LLISTABIORD_crea ();
 
 void LLISTABIORD_insereixOrdenat (LlistaBiOrd *l, Element e);
