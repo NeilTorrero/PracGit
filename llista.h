@@ -2,7 +2,7 @@
 #def _LLISTABIORD_H_
 
 typedef struct N{
-  Element e;
+  int e;
   struct N *seg;
   struct N *ant;
 }NodeBiOrd;
@@ -13,13 +13,13 @@ typedef struct{
   NodeBiOrd *pdi;
 }LlistaBiOrd;
 
-Element ELEMENT_indefinit ();
+int ELEMENT_indefinit ();
 
 LlistaBiOrd LLISTABIORD_crea ();
 
-void LLISTABIORD_insereixOrdenat (LlistaBiOrd *l, Element e);
+void LLISTABIORD_insereixOrdenat (LlistaBiOrd *l, int e);
 
-Element LLISTABIORD_consulta (LlistaBiOrd l);
+int LLISTABIORD_consulta (LlistaBiOrd l);
 
 void LLISTABIORD_esborra (LlistaBiOrd *l);
 
