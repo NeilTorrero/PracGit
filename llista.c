@@ -1,5 +1,10 @@
 #include <llista.h>
 
+Element ELEMENT_indefinit (){
+  Element e;
+  e = 0;
+}
+
 LlistaBiOrd LLISTABIORD_crea(){
   LlistaBiOrd l;
   l.pri = (NodeBiOrd*) malloc (sizeof(NodeBiOrd));
