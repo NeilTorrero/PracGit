@@ -4,7 +4,8 @@
 
 void main() {
   LlistaBiOrd l;
-  Element e;
+  int e;
+  int e_consulta;
 
   printf("Creacio llista\n");
   l = LLISTABIORD_crea();
@@ -13,9 +14,14 @@ void main() {
   e = 12;
   LLISTABIORD_insereixOrdenat (*l, e);
 
-  //Element LLISTABIORD_consulta (LlistaBiOrd l);
+  printf("Consulta valor element dins la llista\n");
+  e_consulta = LLISTABIORD_consulta (l);
+  printf("Valor element = %d \n", e_consulta);
 
-  //void LLISTABIORD_esborra (LlistaBiOrd *l);
+  printf("Esborra el element on es situa el pdi\n");
+  LLISTABIORD_esborra (*l);
+  e_consulta = LLISTABIORD_consulta (l);
+  printf("Valor element = %d \n", e_consulta);
 
   //void LLISTABIORD_avanca (LlistaBiOrd *l);
 
