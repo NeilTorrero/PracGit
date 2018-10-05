@@ -1,7 +1,7 @@
 #include <llista.h>
 
-Element ELEMENT_indefinit (){
-  Element e;
+int ELEMENT_indefinit (){
+  int e;
   e = 0;
 }
 
@@ -29,7 +29,7 @@ LlistaBiOrd LLISTABIORD_crea(){
   return l;
 }
 
-void LLISTABIORD_insereixOrdenat (LlistaBiOrd *l, Element e){
+void LLISTABIORD_insereixOrdenat (LlistaBiOrd *l, int e){
   NodeBiOrd* aux;
   aux = (NodeBiOrd*) malloc (sizeof(NodeBiOrd));
   if (aux == NULL){
@@ -46,8 +46,8 @@ void LLISTABIORD_insereixOrdenat (LlistaBiOrd *l, Element e){
   return l;
 }
 
-Element LLISTABIORD_consulta (LlistaBiOrd l){
-  Element e = ELEMENT_indefinit();
+int LLISTABIORD_consulta (LlistaBiOrd l){
+  int e = ELEMENT_indefinit();
   if (l.pdi != l.pri && l.pdi != l.ult) {
     l = l.pdi -> e;
   }
