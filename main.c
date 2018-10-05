@@ -4,11 +4,14 @@
 
 void main() {
   LlistaBiOrd l;
+  Element e;
 
   printf("Creacio llista\n");
   l = LLISTABIORD_crea();
 
-  LLISTABIORD_insereixOrdenat (LlistaBiOrd *l, Element e);
+  printf("Insercio ordenada a la llista\n");
+  e = 12;
+  LLISTABIORD_insereixOrdenat (*l, e);
 
   //Element LLISTABIORD_consulta (LlistaBiOrd l);
 
