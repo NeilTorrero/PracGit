@@ -23,19 +23,27 @@ void main() {
   e_consulta = LLISTABIORD_consulta (l);
   printf("Valor element = %d \n", e_consulta);
 
+  printf("Avanca el pdi al seguent element de la llista\n");
   //void LLISTABIORD_avanca (LlistaBiOrd *l);
 
+  printf("Retrocediex el pdi al anterior element de la llista\n");
   //void LLISTABIORD_retrocediex (LlistaBiOrd *l);
 
+  printf("El pdi es situa al principi de la llista\n");
   //void LLISTABIORD_vesInici (LlistaBiOrd *l);
 
+  printf("El pdi es situa al final de la llista\n");
   //void LLISTABIORD_vesFi (LlistaBiOrd *l);
 
+  printf("Retorna 1 si el pdi esta al principi de la llista\n", );
   //int LLISTABIORD_inici (LlistaBiOrd l);
 
+  printf("Retorna 1 si el pdi esta al final de la llista\n", );
   //int LLISTABIORD_fi (LlistaBiOrd l);
 
+  printf("Retrona 1 si la llista es buida\n");
   //int LLISTABIORD_buida (LlistaBiOrd l);
 
+  printf("Destruiex la llista, alliberant memoria\n");
   //int LLISTABIORD_destrueix (LlistaBiOrd *l);
 }
