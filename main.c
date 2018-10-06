@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "llista.h"
+#include <llista.h>
 
 typedef struct N{
   int e;
