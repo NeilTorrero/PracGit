@@ -1,17 +1,5 @@
 #include "llista.h"
 
-typedef struct N{
-  int e;
-  struct N *seg;
-  struct N *ant;
-}NodeBiOrd;
-
-typedef struct{
-  NodeBiOrd *pri;
-  NodeBiOrd *ult;
-  NodeBiOrd *pdi;
-}LlistaBiOrd;
-
 void main() {
   LlistaBiOrd lbo;
   int e, boolea;
