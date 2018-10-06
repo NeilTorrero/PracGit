@@ -5,5 +5,5 @@ DEPS =  llista.h
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-mainllista: main.o llista.o
-	$(CC) -o mainllista main.o llista.o
+mainllista: llista.o main.o
+	$(CC) -o mainllista llista.o main.o
