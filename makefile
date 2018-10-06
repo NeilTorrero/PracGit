@@ -1,5 +1,5 @@
-CC = gcc
-CFLAGS = -I.
+CC=gcc
+CFLAGS=-I.
 DEPS = llista.h
 OBJ = main.o llista.o
 
