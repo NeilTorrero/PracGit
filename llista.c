@@ -1,7 +1,7 @@
 #include <llista.h>
 
-Element ELEMENT_indefinit (){
-  Element e;
+int ELEMENT_indefinit (){
+  int e;
   e = 0;
 }
 
