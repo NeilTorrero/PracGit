@@ -1,5 +1,5 @@
-#ifdef _LLISTABIORD_H_
-#def _LLISTABIORD_H_
+#ifndef _LLISTABIORD_H_
+#define _LLISTABIORD_H_
 
 #include <stdio.h>
 #include <stdlib.h>
