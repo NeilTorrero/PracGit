@@ -1,4 +1,4 @@
-#include <llista.h>
+#include "llista.h"
 
 typedef struct N{
   int e;
