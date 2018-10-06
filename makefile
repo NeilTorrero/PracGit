@@ -6,5 +6,5 @@ OBJ = main.o llista.o
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-mainllista: $(OBJ)
+main: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
