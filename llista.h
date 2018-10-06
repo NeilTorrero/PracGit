@@ -1,9 +1,6 @@
 #ifndef _LLISTABIORD_H_
 #define _LLISTABIORD_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-
 typedef struct N{
   int e;
   struct N *seg;
