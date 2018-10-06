@@ -1,4 +1,6 @@
-#include <llista.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "llista.h"
 
 int ELEMENT_indefinit (){
   int e;

@@ -1,49 +1,47 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "llista.h"
 
 void main() {
-  LlistaBiOrd l;
-  int e;
+  LlistaBiOrd lbo;
+  int e, boolea;
   int e_consulta;
 
   printf("Creacio llista\n");
-  l = LLISTABIORD_crea();
+  lbo = LLISTABIORD_crea();
 
   printf("Insercio ordenada a la llista\n");
   e = 12;
-  LLISTABIORD_insereixOrdenat (*l, e);
+  LLISTABIORD_insereixOrdenat (&lbo, e);
 
   printf("Consulta valor element dins la llista\n");
-  e_consulta = LLISTABIORD_consulta (l);
+  e_consulta = LLISTABIORD_consulta (lbo);
   printf("Valor element = %d \n", e_consulta);
 
   printf("Esborra el element on es situa el pdi\n");
-  LLISTABIORD_esborra (*l);
-  e_consulta = LLISTABIORD_consulta (l);
+  LLISTABIORD_esborra (&lbo);
+  e_consulta = LLISTABIORD_consulta (lbo);
   printf("Valor element = %d \n", e_consulta);
 
   printf("Avanca el pdi al seguent element de la llista\n");
-  //void LLISTABIORD_avanca (LlistaBiOrd *l);
+  LLISTABIORD_avanca (&lbo);
 
   printf("Retrocediex el pdi al anterior element de la llista\n");
-  //void LLISTABIORD_retrocediex (LlistaBiOrd *l);
+  LLISTABIORD_retrocediex (&lbo);
 
   printf("El pdi es situa al principi de la llista\n");
-  //void LLISTABIORD_vesInici (LlistaBiOrd *l);
+  LLISTABIORD_vesInici (&lbo);
 
   printf("El pdi es situa al final de la llista\n");
-  //void LLISTABIORD_vesFi (LlistaBiOrd *l);
+  LLISTABIORD_vesFi (&lbo);
 
   printf("Retorna 1 si el pdi esta al principi de la llista\n");
-  //int LLISTABIORD_inici (LlistaBiOrd l);
+  boolea = LLISTABIORD_inici (lbo);
 
   printf("Retorna 1 si el pdi esta al final de la llista\n");
-  //int LLISTABIORD_fi (LlistaBiOrd l);
+  boolea = LLISTABIORD_fi (lbo);
 
   printf("Retrona 1 si la llista es buida\n");
-  //int LLISTABIORD_buida (LlistaBiOrd l);
+  boolea = LLISTABIORD_buida (lbo);
 
   printf("Destruiex la llista, alliberant memoria\n");
-  //int LLISTABIORD_destrueix (LlistaBiOrd *l);
+  boolea = LLISTABIORD_destrueix (&lbo);
 }

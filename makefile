@@ -1,9 +1,10 @@
-CC = gcc
-CFLAGS = -I.
-DEPS =  llista.h
+CC=gcc
+CFLAGS=-I.
+DEPS = llista.h
+OBJ = main.o llista.o
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-mainllista: main.o llista.o
-	$(CC) -o mainllista main.o llista.o
+main: $(OBJ)
+	$(CC) -o $@ $^ $(CFLAGS)

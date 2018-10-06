@@ -1,8 +1,5 @@
-#ifdef _LLISTABIORD_H_
-#def _LLISTABIORD_H_
-
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef _LLISTABIORD_H_
+#define _LLISTABIORD_H_
 
 typedef struct N{
   int e;
