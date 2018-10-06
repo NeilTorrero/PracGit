@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -I.
-DEPS =  llista.h
+DEPS = llista.h
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
