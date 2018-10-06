@@ -16,7 +16,7 @@ typedef struct{
 
 void main() {
   LlistaBiOrd l;
-  int e;
+  int e, boolea;
   int e_consulta;
 
   printf("Creacio llista\n");
@@ -24,38 +24,38 @@ void main() {
 
   printf("Insercio ordenada a la llista\n");
   e = 12;
-  LLISTABIORD_insereixOrdenat (*l, e);
+  LLISTABIORD_insereixOrdenat (&l, e);
 
   printf("Consulta valor element dins la llista\n");
   e_consulta = LLISTABIORD_consulta (l);
   printf("Valor element = %d \n", e_consulta);
 
   printf("Esborra el element on es situa el pdi\n");
-  LLISTABIORD_esborra (*l);
+  LLISTABIORD_esborra (&l);
   e_consulta = LLISTABIORD_consulta (l);
   printf("Valor element = %d \n", e_consulta);
 
   printf("Avanca el pdi al seguent element de la llista\n");
-  //void LLISTABIORD_avanca (LlistaBiOrd *l);
+  LLISTABIORD_avanca (&l);
 
   printf("Retrocediex el pdi al anterior element de la llista\n");
-  //void LLISTABIORD_retrocediex (LlistaBiOrd *l);
+  LLISTABIORD_retrocediex (&l);
 
   printf("El pdi es situa al principi de la llista\n");
-  //void LLISTABIORD_vesInici (LlistaBiOrd *l);
+  LLISTABIORD_vesInici (&l);
 
   printf("El pdi es situa al final de la llista\n");
-  //void LLISTABIORD_vesFi (LlistaBiOrd *l);
+  LLISTABIORD_vesFi (&l);
 
   printf("Retorna 1 si el pdi esta al principi de la llista\n");
-  //int LLISTABIORD_inici (LlistaBiOrd l);
+  boolea = LLISTABIORD_inici (l);
 
   printf("Retorna 1 si el pdi esta al final de la llista\n");
-  //int LLISTABIORD_fi (LlistaBiOrd l);
+  boolea = LLISTABIORD_fi (l);
 
   printf("Retrona 1 si la llista es buida\n");
-  //int LLISTABIORD_buida (LlistaBiOrd l);
+  boolea = LLISTABIORD_buida (l);
 
   printf("Destruiex la llista, alliberant memoria\n");
-  //int LLISTABIORD_destrueix (LlistaBiOrd *l);
+  boolea = LLISTABIORD_destrueix (&l);
 }
