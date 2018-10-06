@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <llista.h>
+#include "llista.h"
 
 void main() {
   LlistaBiOrd l;
@@ -35,10 +35,10 @@ void main() {
   printf("El pdi es situa al final de la llista\n");
   //void LLISTABIORD_vesFi (LlistaBiOrd *l);
 
-  printf("Retorna 1 si el pdi esta al principi de la llista\n", );
+  printf("Retorna 1 si el pdi esta al principi de la llista\n");
   //int LLISTABIORD_inici (LlistaBiOrd l);
 
-  printf("Retorna 1 si el pdi esta al final de la llista\n", );
+  printf("Retorna 1 si el pdi esta al final de la llista\n");
   //int LLISTABIORD_fi (LlistaBiOrd l);
 
   printf("Retrona 1 si la llista es buida\n");
