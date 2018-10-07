@@ -29,20 +29,21 @@ LlistaBiOrd LLISTABIORD_crea(){
   return l;
 }
 
-void LLISTABIORD_insereixOrdenat (LlistaBiOrd *l, int e){
+LlistaBiOrd LLISTABIORD_insereixOrdenat (LlistaBiOrd l, int e){
   NodeBiOrd* aux;
   aux = (NodeBiOrd*) malloc (sizeof(NodeBiOrd));
   if (aux == NULL){
     printf("No s'ha pugut inserir a la llista\n");
   }else{
     aux -> e = e;
-    l -> pdi -> ant = l -> pri;
-    while (l -> pdi -> ant -> seg != NULL && l -> pdi -> ant -> seg -> e < e) {
-      l -> pdi -> ant = l -> pdi -> ant -> seg;
+    l.pdi.ant = l.pri;
+    while (l.pdi.ant -> seg != NULL && l.pdi.ant -> seg -> e < e) {
+      l.pdi.ant = l.pdi.ant -> seg;
     }
-    aux -> seg = l -> pdi -> ant -> seg;
-    l -> pdi -> ant -> seg = aux;
+    aux -> seg = l.pdi.ant -> seg;
+    l.pdi.ant -> seg = aux;
   }
+  return l;
 }
 
 int LLISTABIORD_consulta (LlistaBiOrd l){
