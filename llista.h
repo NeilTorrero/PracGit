@@ -20,7 +20,7 @@ int ELEMENT_indefinit ();
 
 LlistaBiOrd LLISTABIORD_crea ();
 
-void LLISTABIORD_insereixOrdenat (LlistaBiOrd *l, int e);
+LlistaBiOrd LLISTABIORD_insereixOrdenat (LlistaBiOrd l, int e);
 
 int LLISTABIORD_consulta (LlistaBiOrd l);
 
