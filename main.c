@@ -35,6 +35,8 @@ void main() {
     LLISTABIORD_avanca (&lbo);
   }
 
+  element = 3;
+  lbo = LLISTABIORD_insereixOrdenat (lbo, element);
   printf("\nEsborra el element on es situa el pdi\n");
   LLISTABIORD_esborra (&lbo);
   e_consulta = LLISTABIORD_consulta (lbo);
