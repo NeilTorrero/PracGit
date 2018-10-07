@@ -40,14 +40,13 @@ void LLISTABIORD_insereixOrdenat (LlistaBiOrd *l, int e){
     while (l -> pdi -> ant -> seg != NULL && l -> pdi -> ant -> seg -> e < e) {
       l -> pdi -> ant = l -> pdi -> ant -> seg;
     }
-    aux -> seg = l->ant -> seg;
+    aux -> seg = l -> pdi -> ant -> seg;
     l -> pdi -> ant -> seg = aux;
   }
-  return l;
 }
 
 int LLISTABIORD_consulta (LlistaBiOrd l){
-  e = ELEMENT_indefinit();
+  int e = ELEMENT_indefinit();
   if (l.pdi != l.pri && l.pdi != l.ult) {
     l = l.pdi -> e;
   }
