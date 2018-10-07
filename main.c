@@ -29,7 +29,7 @@ void main() {
 
   printf("Consultar tots el elemtns desde el principi\n");
   LLISTABIORD_vesInici (&lbo);
-  while (LLISTABIORD_buida (lbo) != 1) {
+  while (LLISTABIORD_fi (lbo) != 1) {
     e_consulta = LLISTABIORD_consulta (lbo);
     printf("%d \n", e_consulta);
     LLISTABIORD_avanca (&lbo);
