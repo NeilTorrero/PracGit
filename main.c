@@ -10,11 +10,11 @@ void main() {
 
 
   printf("\nInsercio ordenada a la llista\n");
+  element = 2;
+  lbo = LLISTABIORD_insereixOrdenat (lbo, element);
   element = 1;
   lbo = LLISTABIORD_insereixOrdenat (lbo, element);
   element = 3;
-  lbo = LLISTABIORD_insereixOrdenat (lbo, element);
-  element = 2;
   lbo = LLISTABIORD_insereixOrdenat (lbo, element);
 
 
