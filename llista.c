@@ -24,7 +24,7 @@ LlistaBiOrd LLISTABIORD_crea(){
       l.ult -> seg = NULL;
       l.pri -> seg = l.ult;
       l.ult -> ant = l.pri;
-      l.pri = l.ult;
+      l.pdi = l.ult;
       printf("Llista creada\n");
     }
   }
