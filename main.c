@@ -27,7 +27,7 @@ void main() {
   printf("Valor element = %d \n", e_consulta);
 
 
-  printf("Consultar tots el elemtns desde el principi\n");
+  printf("Consultar tots el elements desde el principi\n");
   LLISTABIORD_vesInici (&lbo);
   while (LLISTABIORD_fi (lbo) != 1) {
     e_consulta = LLISTABIORD_consulta (lbo);
@@ -86,7 +86,7 @@ void main() {
   printf("Retorna = %d \n", boolea);
 
 
-  printf("\nRetrona 1 si la llista es buida\n");
+  printf("\nRetorna 1 si la llista es buida\n");
   boolea = LLISTABIORD_buida (lbo);
   printf("Retorna = %d \n", boolea);
 
