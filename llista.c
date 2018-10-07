@@ -3,6 +3,7 @@
 int ELEMENT_indefinit (){
   int e;
   e = 0;
+  return e;
 }
 
 LlistaBiOrd LLISTABIORD_crea(){
