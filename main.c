@@ -48,9 +48,11 @@ void main() {
 
   printf("Retorna 1 si el pdi esta al principi de la llista\n");
   boolea = LLISTABIORD_inici (lbo);
+  printf("Retorna = %d \n", boolea);
 
   printf("Retorna 1 si el pdi esta al final de la llista\n");
   boolea = LLISTABIORD_fi (lbo);
+  printf("Retorna = %d \n", boolea);
 
 
   printf("El pdi es situa al final de la llista\n");
@@ -60,19 +62,24 @@ void main() {
 
   printf("Retorna 1 si el pdi esta al principi de la llista\n");
   boolea = LLISTABIORD_inici (lbo);
+  printf("Retorna = %d \n", boolea);
 
   printf("Retorna 1 si el pdi esta al final de la llista\n");
   boolea = LLISTABIORD_fi (lbo);
+  printf("Retorna = %d \n", boolea);
 
 
   printf("Retrona 1 si la llista es buida\n");
   boolea = LLISTABIORD_buida (lbo);
+  printf("Retorna = %d \n", boolea);
   LLISTABIORD_vesInici (&lbo);
   LLISTABIORD_esborra (&lbo);
   LLISTABIORD_esborra (&lbo);
   boolea = LLISTABIORD_buida (lbo);
+  printf("Retorna = %d \n", boolea);
 
   printf("Destruiex la llista, alliberant memoria\n");
   LLISTABIORD_destrueix (&lbo);
   e_consulta = LLISTABIORD_consulta (lbo);
+  printf("Retorna (-1 en cas de no haverhi llista) = %d \n", e_consulta);
 }
