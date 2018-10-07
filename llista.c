@@ -38,7 +38,7 @@ LlistaBiOrd LLISTABIORD_insereixOrdenat (LlistaBiOrd l, int e){
     printf("No s'ha pugut inserir a la llista\n");
   }else{
     aux -> e = e;
-    //l.pdi = l.pri;
+    l.pdi = l.pri;
     while (l.pdi != l.ult && l.pdi != l.pri && l.pdi -> seg -> e < e) {
       l.pdi = l.pdi -> seg;
     }
@@ -47,7 +47,7 @@ LlistaBiOrd LLISTABIORD_insereixOrdenat (LlistaBiOrd l, int e){
     l.pdi-> seg -> ant = aux;
     l.pdi->seg = aux;
     l.pdi = aux;
-    printf("Element inserit - %d \n");
+    printf("Element inserit - %d \n", e);
   }
   return l;
 }
