@@ -39,14 +39,14 @@ LlistaBiOrd LLISTABIORD_insereixOrdenat (LlistaBiOrd l, int e){
   }else{
     aux -> e = e;
     l.pdi = l.pri;
-    while (l.pdi != l.ult && l.pdi != l.pri && l.pdi -> seg -> e < e) {
+    while ((l.pdi -> ant != NULL || l.pdi -> seg != NULL) && l.pdi -> seg -> e < e) {
       l.pdi = l.pdi -> seg;
     }
     aux -> ant = l.pdi;
     aux-> seg = l.pdi->seg;
     l.pdi-> seg -> ant = aux;
     l.pdi->seg = aux;
-    l.pdi = aux;
+    //l.pdi = aux;
     printf("Element inserit - %d \n", e);
   }
   return l;
