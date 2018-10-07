@@ -43,16 +43,11 @@ void main() {
     LLISTABIORD_avanca (&lbo);
   }
 
-  //Insercio de un element i consulta elements
+  //Insercio de un element
   printf("\n");
   element = 3;
   lbo = LLISTABIORD_insereixOrdenat (lbo, element);
-  LLISTABIORD_vesInici (&lbo);
-  while (LLISTABIORD_fi (lbo) != 1) {
-    e_consulta = LLISTABIORD_consulta (lbo);
-    printf("%d ", e_consulta);
-    LLISTABIORD_avanca (&lbo);
-  }
+
   //S'esborra el element i consulta que s'hagi esborrat
   printf("Esborra el element on es situa el pdi\n");
   LLISTABIORD_esborra (&lbo);
