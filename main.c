@@ -48,6 +48,7 @@ void main() {
   element = 3;
   lbo = LLISTABIORD_insereixOrdenat (lbo, element);
   //Consulta el elements
+  LLISTABIORD_vesInici (&lbo);
   while (LLISTABIORD_fi (lbo) != 1) {
     e_consulta = LLISTABIORD_consulta (lbo);
     printf("%d ", e_consulta);
