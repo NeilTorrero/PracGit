@@ -9,7 +9,7 @@ void main() {
   lbo = LLISTABIORD_crea();
 
 
-  printf("Insercio ordenada a la llista\n");
+  printf("\nInsercio ordenada a la llista\n");
   element = 1;
   lbo = LLISTABIORD_insereixOrdenat (lbo, element);
   element = 3;
@@ -18,30 +18,30 @@ void main() {
   lbo = LLISTABIORD_insereixOrdenat (lbo, element);
 
 
-  printf("Consulta valor element dins la llista\n");
+  printf("\nConsulta valor element dins la llista\n");
   e_consulta = LLISTABIORD_consulta (lbo);
   printf("Valor element = %d \n", e_consulta);
 
 
-  printf("Esborra el element on es situa el pdi\n");
+  printf("\nEsborra el element on es situa el pdi\n");
   LLISTABIORD_esborra (&lbo);
   e_consulta = LLISTABIORD_consulta (lbo);
   printf("Valor element = %d \n", e_consulta);
 
 
-  printf("Avanca el pdi al seguent element de la llista\n");
+  printf("\nAvanca el pdi al seguent element de la llista\n");
   LLISTABIORD_avanca (&lbo);
   e_consulta = LLISTABIORD_consulta (lbo);
   printf("Valor element = %d \n", e_consulta);
 
 
-  printf("Retrocediex el pdi al anterior element de la llista\n");
+  printf("\nRetrocediex el pdi al anterior element de la llista\n");
   LLISTABIORD_retrocediex (&lbo);
   e_consulta = LLISTABIORD_consulta (lbo);
   printf("Valor element = %d \n", e_consulta);
 
 
-  printf("El pdi es situa al principi de la llista\n");
+  printf("\nEl pdi es situa al principi de la llista\n");
   LLISTABIORD_vesInici (&lbo);
   e_consulta = LLISTABIORD_consulta (lbo);
   printf("Valor element = %d \n", e_consulta);
@@ -56,7 +56,7 @@ void main() {
   printf("Retorna = %d \n", boolea);
 
 
-  printf("El pdi es situa al final de la llista\n");
+  printf("\nEl pdi es situa al final de la llista\n");
   LLISTABIORD_vesFi (&lbo);
   e_consulta = LLISTABIORD_consulta (lbo);
   printf("Valor element = %d \n", e_consulta);
@@ -71,7 +71,7 @@ void main() {
   printf("Retorna = %d \n", boolea);
 
 
-  printf("Retrona 1 si la llista es buida\n");
+  printf("\nRetrona 1 si la llista es buida\n");
   boolea = LLISTABIORD_buida (lbo);
   printf("Retorna = %d \n", boolea);
 
@@ -83,7 +83,7 @@ void main() {
   printf("Retorna = %d \n", boolea);
 
 
-  printf("Destruiex la llista, alliberant memoria\n");
+  printf("\nDestruiex la llista, alliberant memoria\n");
   LLISTABIORD_destrueix (&lbo);
   printf("Es consulta a la llista\n");
   e_consulta = LLISTABIORD_consulta (lbo);
