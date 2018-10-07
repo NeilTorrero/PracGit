@@ -2,7 +2,7 @@
 
 int ELEMENT_indefinit (){
   int e;
-  e = 0;
+  e = -1;
   return e;
 }
 
@@ -38,12 +38,14 @@ LlistaBiOrd LLISTABIORD_insereixOrdenat (LlistaBiOrd l, int e){
     printf("No s'ha pugut inserir a la llista\n");
   }else{
     aux -> e = e;
-    l.pdi = l.pri->seg;
-    while (l.pdi -> seg != NULL && l.pdi -> seg -> e < e) {
+    l.pdi = l.pri;
+    while (l.pdi -> seg != NULL && l.pdi -> ant != NULL && l.pdi -> seg -> e < e) {
       l.pdi = l.pdi -> seg;
     }
-    aux -> seg = l.pdi -> seg;
-    l.pdi -> seg = aux;
+    aux -> seg = l.pdi;
+    aux-> ant = l.pdi->ant;
+    l.pdi-> ant -> seg = aux;
+    l.pdi->ant = aux;
     printf("Element inserit\n");
   }
   return l;
