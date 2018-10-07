@@ -46,6 +46,7 @@ LlistaBiOrd LLISTABIORD_insereixOrdenat (LlistaBiOrd l, int e){
     aux-> seg = l.pdi->seg;
     l.pdi-> seg -> ant = aux;
     l.pdi->seg = aux;
+    l.pdi = aux;
     printf("Element inserit\n");
   }
   return l;
