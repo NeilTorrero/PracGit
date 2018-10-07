@@ -47,7 +47,16 @@ void main() {
   printf("\n");
   element = 3;
   lbo = LLISTABIORD_insereixOrdenat (lbo, element);
-
+  //Consulta el elements
+  while (LLISTABIORD_fi (lbo) != 1) {
+    e_consulta = LLISTABIORD_consulta (lbo);
+    printf("%d ", e_consulta);
+    LLISTABIORD_avanca (&lbo);
+  }
+  //Es retrocediex fins trobar el element inserit
+  while (LLISTABIORD_consulta (lbo) != 3){
+    LLISTABIORD_retrocediex (&lbo);
+  }
   //S'esborra el element i consulta que s'hagi esborrat
   printf("Esborra el element on es situa el pdi\n");
   LLISTABIORD_esborra (&lbo);
