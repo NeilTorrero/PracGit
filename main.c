@@ -16,6 +16,12 @@ void main() {
   lbo = LLISTABIORD_insereixOrdenat (lbo, element);
   element = 3;
   lbo = LLISTABIORD_insereixOrdenat (lbo, element);
+  element = 5;
+  lbo = LLISTABIORD_insereixOrdenat (lbo, element);
+  element = 1;
+  lbo = LLISTABIORD_insereixOrdenat (lbo, element);
+  element = 4;
+  lbo = LLISTABIORD_insereixOrdenat (lbo, element);
 
 
   printf("\nConsulta valor element dins la llista\n");
