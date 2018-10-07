@@ -1,6 +1,9 @@
 #ifndef _LLISTABIORD_H_
 #define _LLISTABIORD_H_
 
+#include <stdio.h>
+#include <stdlib.h>
+
 typedef struct N{
   int e;
   struct N *seg;
@@ -17,7 +20,7 @@ int ELEMENT_indefinit ();
 
 LlistaBiOrd LLISTABIORD_crea ();
 
-void LLISTABIORD_insereixOrdenat (LlistaBiOrd *l, int e);
+LlistaBiOrd LLISTABIORD_insereixOrdenat (LlistaBiOrd l, int e);
 
 int LLISTABIORD_consulta (LlistaBiOrd l);
 
@@ -37,6 +40,6 @@ int LLISTABIORD_fi (LlistaBiOrd l);
 
 int LLISTABIORD_buida (LlistaBiOrd l);
 
-int LLISTABIORD_destrueix (LlistaBiOrd *l);
+void LLISTABIORD_destrueix (LlistaBiOrd *l);
 
 #endif

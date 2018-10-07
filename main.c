@@ -2,15 +2,15 @@
 
 void main() {
   LlistaBiOrd lbo;
-  int e, boolea;
+  int element, boolea;
   int e_consulta;
 
   printf("Creacio llista\n");
   lbo = LLISTABIORD_crea();
 
   printf("Insercio ordenada a la llista\n");
-  e = 12;
-  LLISTABIORD_insereixOrdenat (&lbo, e);
+  element = 12;
+  lbo = LLISTABIORD_insereixOrdenat (lbo, element);
 
   printf("Consulta valor element dins la llista\n");
   e_consulta = LLISTABIORD_consulta (lbo);
@@ -43,5 +43,5 @@ void main() {
   boolea = LLISTABIORD_buida (lbo);
 
   printf("Destruiex la llista, alliberant memoria\n");
-  boolea = LLISTABIORD_destrueix (&lbo);
+  LLISTABIORD_destrueix (&lbo);
 }

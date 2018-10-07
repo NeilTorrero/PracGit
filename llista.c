@@ -1,10 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "llista.h"
 
 int ELEMENT_indefinit (){
   int e;
-  e = 0;
+  e = -1;
+  return e;
 }
 
 LlistaBiOrd LLISTABIORD_crea(){
@@ -26,32 +25,36 @@ LlistaBiOrd LLISTABIORD_crea(){
       l.pri -> seg = l.ult;
       l.ult -> ant = l.pri;
       l.pri = l.ult;
+      printf("Llista creada\n");
     }
   }
   return l;
 }
 
-void LLISTABIORD_insereixOrdenat (LlistaBiOrd *l, int e){
+LlistaBiOrd LLISTABIORD_insereixOrdenat (LlistaBiOrd l, int e){
   NodeBiOrd* aux;
   aux = (NodeBiOrd*) malloc (sizeof(NodeBiOrd));
   if (aux == NULL){
     printf("No s'ha pugut inserir a la llista\n");
   }else{
     aux -> e = e;
-    l.ant = l.pri;
-    while (l.ant -> seg != NULL && l.ant -> seg -> e < e) {
-      l.ant = l.ant -> seg;
+    l.pdi = l.pri;
+    while (l.pdi -> seg != NULL && l.pdi -> ant != NULL && l.pdi -> seg -> e < e) {
+      l.pdi = l.pdi -> seg;
     }
-    aux -> seg = l.ant -> seg;
-    l.ant -> seg = aux;
+    aux -> seg = l.pdi;
+    aux-> ant = l.pdi->ant;
+    l.pdi-> ant -> seg = aux;
+    l.pdi->ant = aux;
+    printf("Element inserit\n");
   }
   return l;
 }
 
 int LLISTABIORD_consulta (LlistaBiOrd l){
-  e = ELEMENT_indefinit();
+  int e = ELEMENT_indefinit();
   if (l.pdi != l.pri && l.pdi != l.ult) {
-    l = l.pdi -> e;
+    e = l.pdi -> e;
   }
   return e;
 }
@@ -99,7 +102,7 @@ int LLISTABIORD_buida (LlistaBiOrd l){
   return l.pri -> seg == l.ult;
 }
 
-int LLISTABIORD_destrueix (LlistaBiOrd *l){
+void LLISTABIORD_destrueix (LlistaBiOrd *l){
   NodeBiOrd *aux;
   while (l -> pri != NULL) {
     aux = l -> pri;
