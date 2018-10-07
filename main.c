@@ -27,7 +27,18 @@ void main() {
   printf("Valor element = %d \n", e_consulta);
 
 
-  printf("\nEsborra el element on es situa el pdi\n");
+  printf("Consultar tots el elements desde el principi\n");
+  LLISTABIORD_vesInici (&lbo);
+  while (LLISTABIORD_fi (lbo) != 1) {
+    e_consulta = LLISTABIORD_consulta (lbo);
+    printf("%d ", e_consulta);
+    LLISTABIORD_avanca (&lbo);
+  }
+
+  printf("\n");
+  element = 3;
+  lbo = LLISTABIORD_insereixOrdenat (lbo, element);
+  printf("Esborra el element on es situa el pdi\n");
   LLISTABIORD_esborra (&lbo);
   e_consulta = LLISTABIORD_consulta (lbo);
   printf("Valor element = %d \n", e_consulta);
@@ -75,7 +86,7 @@ void main() {
   printf("Retorna = %d \n", boolea);
 
 
-  printf("\nRetrona 1 si la llista es buida\n");
+  printf("\nRetorna 1 si la llista es buida\n");
   boolea = LLISTABIORD_buida (lbo);
   printf("Retorna = %d \n", boolea);
 
