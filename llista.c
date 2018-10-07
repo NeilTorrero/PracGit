@@ -37,12 +37,12 @@ LlistaBiOrd LLISTABIORD_insereixOrdenat (LlistaBiOrd l, int e){
     printf("No s'ha pugut inserir a la llista\n");
   }else{
     aux -> e = e;
-    l.pdi->ant = l.pri;
-    while (l.pdi->ant -> seg != NULL && l.pdi->ant -> seg -> e < e) {
-      l.pdi->ant = l.pdi->ant -> seg;
+    (l.pdi)->ant = l.pri;
+    while ((l.pdi)->ant -> seg != NULL && (l.pdi)->ant -> seg -> e < e) {
+      (l.pdi)->ant = (l.pdi)->ant -> seg;
     }
-    aux -> seg = l.pdi->ant -> seg;
-    l.pdi->ant -> seg = aux;
+    aux -> seg = (l.pdi)->ant -> seg;
+    (l.pdi)->ant -> seg = aux;
     printf("Element inserit\n");
   }
   return l;
