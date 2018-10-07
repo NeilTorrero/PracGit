@@ -45,6 +45,7 @@ void main() {
   LLISTABIORD_vesInici (&lbo);
   e_consulta = LLISTABIORD_consulta (lbo);
   printf("Valor element = %d \n", e_consulta);
+  LLISTABIORD_retrocediex (&lbo);
 
   printf("Retorna 1 si el pdi esta al principi de la llista\n");
   boolea = LLISTABIORD_inici (lbo);
@@ -59,6 +60,7 @@ void main() {
   LLISTABIORD_vesFi (&lbo);
   e_consulta = LLISTABIORD_consulta (lbo);
   printf("Valor element = %d \n", e_consulta);
+  LLISTABIORD_avanca (&lbo);
 
   printf("Retorna 1 si el pdi esta al principi de la llista\n");
   boolea = LLISTABIORD_inici (lbo);
@@ -72,14 +74,18 @@ void main() {
   printf("Retrona 1 si la llista es buida\n");
   boolea = LLISTABIORD_buida (lbo);
   printf("Retorna = %d \n", boolea);
+
+  printf("Es va al inici i es borren els elements\n");
   LLISTABIORD_vesInici (&lbo);
   LLISTABIORD_esborra (&lbo);
   LLISTABIORD_esborra (&lbo);
   boolea = LLISTABIORD_buida (lbo);
   printf("Retorna = %d \n", boolea);
 
+
   printf("Destruiex la llista, alliberant memoria\n");
   LLISTABIORD_destrueix (&lbo);
+  printf("Es consulta a la llista\n");
   e_consulta = LLISTABIORD_consulta (lbo);
   printf("Retorna (-1 en cas de no haverhi llista) = %d \n", e_consulta);
 }
