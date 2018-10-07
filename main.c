@@ -43,5 +43,5 @@ void main() {
   boolea = LLISTABIORD_buida (lbo);
 
   printf("Destruiex la llista, alliberant memoria\n");
-  boolea = LLISTABIORD_destrueix (&lbo);
+  LLISTABIORD_destrueix (&lbo);
 }
