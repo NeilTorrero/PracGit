@@ -31,13 +31,14 @@ void main() {
   LLISTABIORD_vesInici (&lbo);
   while (LLISTABIORD_fi (lbo) != 1) {
     e_consulta = LLISTABIORD_consulta (lbo);
-    printf("%d \n", e_consulta);
+    printf("%d ", e_consulta);
     LLISTABIORD_avanca (&lbo);
   }
 
+  printf("\n");
   element = 3;
   lbo = LLISTABIORD_insereixOrdenat (lbo, element);
-  printf("\nEsborra el element on es situa el pdi\n");
+  printf("Esborra el element on es situa el pdi\n");
   LLISTABIORD_esborra (&lbo);
   e_consulta = LLISTABIORD_consulta (lbo);
   printf("Valor element = %d \n", e_consulta);
