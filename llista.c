@@ -48,7 +48,7 @@ void LLISTABIORD_insereixOrdenat (LlistaBiOrd *l, int e){
 int LLISTABIORD_consulta (LlistaBiOrd l){
   int e = ELEMENT_indefinit();
   if (l.pdi != l.pri && l.pdi != l.ult) {
-    l = l.pdi -> e;
+    e = l.pdi -> e;
   }
   return e;
 }
