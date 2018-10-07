@@ -39,7 +39,7 @@ LlistaBiOrd LLISTABIORD_insereixOrdenat (LlistaBiOrd l, int e){
   }else{
     aux -> e = e;
     l.pdi = l.pri;
-    while (l.pdi -> seg != NULL && l.pdi -> seg -> e < e) {
+    while (l.pdi != l.ult && l.pdi -> seg -> e < e) {
       l.pdi = l.pdi -> seg;
     }
     aux -> ant = l.pdi;
