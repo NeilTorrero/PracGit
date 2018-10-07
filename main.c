@@ -12,9 +12,9 @@ void main() {
   printf("Insercio ordenada a la llista\n");
   element = 1;
   lbo = LLISTABIORD_insereixOrdenat (lbo, element);
-  element = 2;
-  lbo = LLISTABIORD_insereixOrdenat (lbo, element);
   element = 3;
+  lbo = LLISTABIORD_insereixOrdenat (lbo, element);
+  element = 2;
   lbo = LLISTABIORD_insereixOrdenat (lbo, element);
 
 
@@ -39,7 +39,7 @@ void main() {
   LLISTABIORD_retrocediex (&lbo);
   e_consulta = LLISTABIORD_consulta (lbo);
   printf("Valor element = %d \n", e_consulta);
-  
+
 
   printf("El pdi es situa al principi de la llista\n");
   LLISTABIORD_vesInici (&lbo);
