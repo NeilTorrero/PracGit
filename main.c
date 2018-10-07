@@ -67,6 +67,10 @@ void main() {
     printf("%d ", e_consulta);
     LLISTABIORD_avanca (&lbo);
   }
+  //Es tornar a situar el pdi al centre de la llista
+  while (LLISTABIORD_consulta (lbo) != 3){
+    LLISTABIORD_retrocediex (&lbo);
+  }
 
   //S'avanca el pdi i es mira quin es el seguent element
   printf("\nAvanca el pdi al seguent element de la llista\n");
