@@ -10,7 +10,7 @@ void main() {
 
   printf("Insercio ordenada a la llista\n");
   element = 12;
-  LLISTABIORD_insereixOrdenat (&lbo, element);
+  lbo = LLISTABIORD_insereixOrdenat (lbo, element);
 
   printf("Consulta valor element dins la llista\n");
   e_consulta = LLISTABIORD_consulta (lbo);
