@@ -24,6 +24,7 @@ LlistaBiOrd LLISTABIORD_crea(){
       l.pri -> seg = l.ult;
       l.ult -> ant = l.pri;
       l.pri = l.ult;
+      printf("Llista creada\n");
     }
   }
   return l;
@@ -42,6 +43,7 @@ LlistaBiOrd LLISTABIORD_insereixOrdenat (LlistaBiOrd l, int e){
     }
     aux -> seg = l.pdi->ant -> seg;
     l.pdi->ant -> seg = aux;
+    printf("Element inserit\n");
   }
   return l;
 }
@@ -97,7 +99,7 @@ int LLISTABIORD_buida (LlistaBiOrd l){
   return l.pri -> seg == l.ult;
 }
 
-int LLISTABIORD_destrueix (LlistaBiOrd *l){
+void LLISTABIORD_destrueix (LlistaBiOrd *l){
   NodeBiOrd *aux;
   while (l -> pri != NULL) {
     aux = l -> pri;
