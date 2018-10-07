@@ -29,17 +29,17 @@ void main() {
   printf("Valor element = %d \n", e_consulta);
 
 
-  printf("Retrocediex el pdi al anterior element de la llista\n");
-  LLISTABIORD_retrocediex (&lbo);
-  e_consulta = LLISTABIORD_consulta (lbo);
-  printf("Valor element = %d \n", e_consulta);
-
-
   printf("Avanca el pdi al seguent element de la llista\n");
   LLISTABIORD_avanca (&lbo);
   e_consulta = LLISTABIORD_consulta (lbo);
   printf("Valor element = %d \n", e_consulta);
 
+
+  printf("Retrocediex el pdi al anterior element de la llista\n");
+  LLISTABIORD_retrocediex (&lbo);
+  e_consulta = LLISTABIORD_consulta (lbo);
+  printf("Valor element = %d \n", e_consulta);
+  
 
   printf("El pdi es situa al principi de la llista\n");
   LLISTABIORD_vesInici (&lbo);
