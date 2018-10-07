@@ -18,8 +18,6 @@ void main() {
   lbo = LLISTABIORD_insereixOrdenat (lbo, element);
   element = 5;
   lbo = LLISTABIORD_insereixOrdenat (lbo, element);
-  element = 1;
-  lbo = LLISTABIORD_insereixOrdenat (lbo, element);
   element = 4;
   lbo = LLISTABIORD_insereixOrdenat (lbo, element);
 
@@ -83,8 +81,9 @@ void main() {
 
   printf("Es va al inici i es borren els elements\n");
   LLISTABIORD_vesInici (&lbo);
-  LLISTABIORD_esborra (&lbo);
-  LLISTABIORD_esborra (&lbo);
+  while (LLISTABIORD_buida (lbo) != 1) {
+    LLISTABIORD_esborra (&lbo);
+  }
   boolea = LLISTABIORD_buida (lbo);
   printf("Retorna = %d \n", boolea);
 
